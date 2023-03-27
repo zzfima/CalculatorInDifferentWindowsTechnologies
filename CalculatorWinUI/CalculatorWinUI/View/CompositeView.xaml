@@ -1,0 +1,33 @@
+<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<UserControl
+    x:Class="CalculatorWinUI.View.CompositeView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:view="using:CalculatorWinUI.View"
+    xmlns:viewModel="using:CalculatorWinUI.ViewModel"
+    mc:Ignorable="d">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <viewModel:CompositeViewModelLocator x:Key="CompositeViewModelLocator" />
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <UserControl.DataContext>
+        <Binding Source="{StaticResource CompositeViewModelLocator}" Path="MainViewModel" />
+    </UserControl.DataContext>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <view:CalcDisplayView DataContext="{Binding CalcDisplayViewModel}" Grid.Row="0"/>
+        <view:CalcControlsView DataContext="{Binding CalcControlsViewModel}" Grid.Row="1"/>
+    </Grid>
+</UserControl>
