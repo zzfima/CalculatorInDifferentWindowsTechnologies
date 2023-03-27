@@ -13,15 +13,57 @@
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        
-        <Button>Clear Entry</Button>
+
+        <Button Grid.Row="0" Grid.Column="0" Command="{Binding ClearEntityCommand}">Clear Entry</Button>
+
+        <Grid Grid.Row="1" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Row="0" Grid.Column="0" Command="{Binding Press0Command}">0</Button>
+            <Button Grid.Row="0" Grid.Column="1" Command="{Binding Press1Command}">1</Button>
+            <Button Grid.Row="0" Grid.Column="2" Command="{Binding Press2Command}">2</Button>
+            <Button Grid.Row="0" Grid.Column="3" Command="{Binding Press3Command}">3</Button>
+
+            <Button Grid.Row="1" Grid.Column="0" Command="{Binding Press4Command}">4</Button>
+            <Button Grid.Row="1" Grid.Column="1" Command="{Binding Press5Command}">5</Button>
+            <Button Grid.Row="1" Grid.Column="2" Command="{Binding Press6Command}">6</Button>
+            <Button Grid.Row="1" Grid.Column="3" Command="{Binding Press7Command}">7</Button>
+
+            <Button Grid.Row="2" Grid.Column="0" Command="{Binding Press8Command}">8</Button>
+            <Button Grid.Row="2" Grid.Column="1" Command="{Binding Press9Command}">9</Button>
+            <Button Grid.Row="2" Grid.Column="2" Command="{Binding PressDotCommand}">.</Button>
+            <Button Grid.Row="2" Grid.Column="3" Command="{Binding PressEqualCommand}">=</Button>
+        </Grid>
+
+        <Grid Grid.Row="0" Grid.RowSpan="2" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Row="0" Grid.Column="0" Command="{Binding PressPlusCommand}">+</Button>
+            <Button Grid.Row="1" Grid.Column="0" Command="{Binding PressMinusCommand}">-</Button>
+            <Button Grid.Row="2" Grid.Column="0" Command="{Binding PressMultiplyCommand}">*</Button>
+            <Button Grid.Row="3" Grid.Column="0" Command="{Binding PressDevideCommand}">/</Button>
+        </Grid>
 
     </Grid>
 </UserControl>
