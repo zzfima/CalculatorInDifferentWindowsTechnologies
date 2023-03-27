@@ -9,7 +9,6 @@ namespace CalculatorWinUI.ViewModel
     {
         private readonly IMvxMessenger _messenger;
         public IMvxCommand ClearEntityCommand { get; set; }
-
         public IMvxCommand Press0Command { get; set; }
         public IMvxCommand Press1Command { get; set; }
         public IMvxCommand Press2Command { get; set; }
